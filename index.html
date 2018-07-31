@@ -365,17 +365,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-          
+          Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in 
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/31/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -515,75 +513,18 @@
       
         
           
-            <p>【hello，hexo！】终于搞定了hexo博客多终端同步管理了，现整理出过程分享出来，<br>同时自己也再顺一遍。如果有错误欢迎指正~。</p>
-<h2 id="软件与准备"><a href="#软件与准备" class="headerlink" title="软件与准备"></a><strong>软件与准备</strong></h2><p>1.node.js node.js中文网</p>
-<p>2.git git官网 如果下载速度过慢，请移步百度下载，只是版本差异</p>
-<p>3.文本编辑器，个人用的sublime text（其实用记事本也可以）</p>
-<p>4.注册github帐号</p>
-<h2 id="安装node与git"><a href="#安装node与git" class="headerlink" title="安装node与git"></a><strong>安装node与git</strong></h2><p>上面的准备工作都完成后就可以进行软件安装了。</p>
-<p>1.安装node 。直接双击下载下来的额msi文件，一路下一步就ok了，安装完之后调出命令行或者node命令输入终端，输入node -v看到版本信息就表明安装成功了。</p>
-<p>2.安装git 。直接双击下载下来的git安装程序，同node安装，安装完之后右键发现多了两个Git GUI Here 、Git Bash Here，点击后者，然后输入git –version出现版本信息就表明安装成功了。</p>
-<p>3.选装cnpm。由于npm速度有时候令人堪忧，所以建议安装淘宝源的cnpm，在git bash中输入下面整段</p>
-<pre><code>alias cnpm=&quot;npm --registry=https://registry.npm.taobao.org \
-    --cache=$HOME/.npm/.cache/cnpm \
-    --disturl=https://npm.taobao.org/dist \
-    --userconfig=$HOME/.cnpmrc&quot;
-    &lt;/code&gt;&lt;/pre&gt;    
-</code></pre><p>安装完之后验证，输入：cnpm info express,若出现一大堆信息则表明成功了</p>
-<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a><strong>安装hexo</strong></h2><p>1.全局安装。在git bash 下输入：<code>cnpm install -g hexo-cli</code></p>
-<p>安装完之后，输入<code>hexo -v</code>，出现版本信息则表明安装成功</p>
-<p>2.创建hexo项目。在g盘（你可以在任意盘，这里只是举个栗子^_^）新建一个文件夹hexo。进入到此文件夹右键点git bash，然后输入<code>hexo init</code>,走完命令行之后输入：<code>cnpm install</code></p>
-<p>3.安装完之后可以输入：hexo server启动本地服务器，在浏览器中输入：<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 来访问hexo博客。</p>
-<p>4.到此，本地搭建已经成功。</p>
-<h2 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a><strong>更换主题</strong></h2><p>这里我就不细说更换主题的内容了。太长了，有空单聊。</p>
-<h2 id="创建github-pages与配置ssh"><a href="#创建github-pages与配置ssh" class="headerlink" title="创建github pages与配置ssh"></a><strong>创建github pages与配置ssh</strong></h2><p>1.创建博客仓库。登陆到github上新建一个仓库，名称为：你的用户名.github.io</p>
-<p>2.本地生成ssh密钥。git bash下输入<code>ssh-keygen -t rsa -C &quot;你的邮箱地址&quot;</code></p>
-<p>3.上传公钥串。在你的电脑C：\ Users\你的计算机用户名.ssh目录下打开刚刚生成的id_rsa.pub，复制里面的内容。然后在这里<a href="https://github.com/settings/keys" target="_blank" rel="noopener">https://github.com/settings/keys</a> 新建一个ssh key，title随便写，把公钥串粘贴到文本框，保存即可。</p>
-<h2 id="将本地博客同步到github上"><a href="#将本地博客同步到github上" class="headerlink" title="将本地博客同步到github上"></a><strong>将本地博客同步到github上</strong></h2><p>1.安装必要插件。进入到本地的hexo目录，在git bash下分别输入<code>cnpm install hexo -server --save</code> 和<code>cnpm install hexo-deployer-git --save</code></p>
-<p>2.编辑博客配置文件：_config.yml,具体参考<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">https://hexo.io/zh-cn/docs/configuration.html</a> （最重要的是配置deploy）</p>
-<pre><code>deploy:
-      type: git
-      repo: git@github.com:你的github用户名/你的github用户名.github.io.git
-      branch: master
-</code></pre><p>1.重新部署。在git bash中依次执行<code>hexo clean</code>（清除旧的public生成文件）<code>hexo generate</code>（或者hexo g 生成静态文件）<code>hexo server</code>（本地预览）<code>hexo deploy</code>（部署到github上，第一次会有弹框提示，输入yes，点击ok）</p>
-<p>2.提交成功后就可以访问了</p>
-<p>至此，博客搭建结束！可以稍微休息下，庆祝一下了~.</p>
-<h2 id="多PC同步管理博客"><a href="#多PC同步管理博客" class="headerlink" title="多PC同步管理博客"></a><strong>多PC同步管理博客</strong></h2><p>休息结束，下面干货来了。很多人可能家里一台笔记本，公司一个台式机，想两个同时管理博客，同时达到备份的博客主题、文章、配置的目的。下面就介绍一下用github来备份博客并同步博客。</p>
-<h2 id="A电脑备份博客内容到github"><a href="#A电脑备份博客内容到github" class="headerlink" title="A电脑备份博客内容到github"></a><strong>A电脑备份博客内容到github</strong></h2><p>1.配置.gitignore文件。进入博客目录文件夹下，找到此文件，用sublime text 打开，在最后增加两行内容/.deploy_git和/public</p>
-<p>2.初始化仓库。在博客根目录下，在git bash下依次执行<code>git init</code>和<code>git remote add origin &lt;server&gt; &lt;server&gt;</code>为远程仓库地址。</p>
-<p>3.同步到远程仓库。gitbash下依次执行以下命令</p>
-<pre><code>git add . #添加目录下所有文件
-git commit -m &quot;更新说明&quot; #提交并添加更新说明
-git push -u origin master #推送更新到远程仓库
-</code></pre><h2 id="B电脑拉下远程仓库文件"><a href="#B电脑拉下远程仓库文件" class="headerlink" title="B电脑拉下远程仓库文件"></a><strong>B电脑拉下远程仓库文件</strong></h2><p>在B电脑上同样先安装好node、git、ssh、hexo，然后建好hexo文件夹，安装好插件，（然后选做：将备份到远程仓库的文件及文件夹删除），然后执行以下命令：</p>
-<pre><code>git init
-git remote add origin &lt;server&gt;
-git fetch --all
-git reset --hard origin/master
-</code></pre><h2 id="发布博客后同步"><a href="#发布博客后同步" class="headerlink" title="发布博客后同步"></a><strong>发布博客后同步</strong></h2><p>在B电脑发布完博客之后，记得将博客备份同步到远程仓库<br>执行以下命令：</p>
-<pre><code>git add .
-#可以用git master 查看更改内容
-git commit -m &quot;更新信息&quot;
-git push -u origin master #以后每次提交可以直接git push
-</code></pre><h2 id="平时同步管理"><a href="#平时同步管理" class="headerlink" title="平时同步管理"></a><strong>平时同步管理</strong></h2><p>每次想写博客时，先执行：<code>git pull</code>进行同步更新。发布完文章后同样按照上面的 发布博客后同步 同步到远程仓库。</p>
-<h2 id="平时常用命令整理"><a href="#平时常用命令整理" class="headerlink" title="平时常用命令整理"></a><strong>平时常用命令整理</strong></h2><pre><code>git pull #同步更新
-hexo new post &quot;新建文章&quot; #简写形式 hexo n &quot;新建文章&quot;
-hexo clean #清除旧的public文件夹
-hexo generate #生成静态文件 简写形式 hexo g
-hexo deploy #发布到github上 简写形式 hexo d
-git add . #添加更改文件到缓存区
-git commit -m &quot;更新说明&quot; #提交到本地仓库
-git push -u origin master #推送到远程仓库进行备份
-</code></pre><p>Ending</p>
-<p>终于结束了。文章有点长，如果一气呵成的话，应该没有大问题。可能有一些地方粗略的提了一下，欢迎批评指正。</p>
-<blockquote>
-<p>转载请注明出处：<a href="http://eryouhao.github.io/2016/06/25/hello-hexo/" target="_blank" rel="noopener">http://eryouhao.github.io/2016/06/25/hello-hexo/</a></p>
-</blockquote>
-<blockquote>
-</blockquote>
-<p>作者：<br>链接：<a href="https://www.imooc.com/article/9707?block_id=tuijian_wz" target="_blank" rel="noopener">https://www.imooc.com/article/9707?block_id=tuijian_wz</a><br>来源：慕课网</p>
-
-          
+          【hello，hexo！】终于搞定了hexo博客多终端同步管理了，现整理出过程分享出来，同时自己也再顺一遍。如果有错误欢迎指正~。
+软件与准备1.node.js node.js中文网
+2.git git官网 如果下载速度过慢，请移步百度下载，只是版本差异
+3.文本编辑器，个人用的sublime te
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/30/Hexo搭建博客并实现多终端同步管理/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -723,27 +664,17 @@ git push -u origin master #推送到远程仓库进行备份
       
         
           
-            <p>npm install express –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a></p>
-<p>Mark一下 <a href="https://link.jianshu.com/?t=http://riny.net/2014/cnpm/" title="国内优秀npm镜像推荐及使用" target="_blank" rel="noopener">原文国内优秀npm镜像推荐及使用</a></p>
-<p>npm<br>全称Node Package Manager<br>，是node.js的模块依赖管理工具。由于npm<br>的源在国外，所以国内用户使用起来各种不方便。下面整理出了一部分国内优秀的npm<br>镜像资源，国内用户可以选择使用。</p>
-<h2 id="国内优秀npm镜像"><a href="#国内优秀npm镜像" class="headerlink" title="国内优秀npm镜像"></a><strong>国内优秀npm镜像</strong></h2><h3 id="淘宝npm镜像"><a href="#淘宝npm镜像" class="headerlink" title="淘宝npm镜像"></a>淘宝npm镜像</h3><p>搜索地址：<a href="http://npm.taobao.org/" target="_blank" rel="noopener">http://npm.taobao.org/</a><br>registry地址：<a href="http://registry.npm.taobao.org/" target="_blank" rel="noopener">http://registry.npm.taobao.org/</a></p>
-<h3 id="cnpmjs镜像"><a href="#cnpmjs镜像" class="headerlink" title="cnpmjs镜像"></a>cnpmjs镜像</h3><p>搜索地址：<a href="http://cnpmjs.org/" target="_blank" rel="noopener">http://cnpmjs.org/</a><br>registry地址：<a href="http://r.cnpmjs.org/" target="_blank" rel="noopener">http://r.cnpmjs.org/</a></p>
-<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><p>有很多方法来配置npm<br>的registry地址，下面根据不同情境列出几种比较常用的方法。以淘宝npm</p>
-<p>镜像举例：</p>
-<p>1.临时使用<br>npm –registry <a href="https://registry.npm.taobao.org" target="_blank" rel="noopener">https://registry.npm.taobao.org</a> install express</p>
-<p>2.持久使用<br>npm config set registry <a href="https://registry.npm.taobao.org//" target="_blank" rel="noopener">https://registry.npm.taobao.org//</a> 配置后可通过下面方式来验证是否成功<br>npm config get registry// 或npm info express</p>
-<p>3.通过cnpm使用<br>npm install -g cnpm –registry=<a href="https://registry.npm.taobao.org//" target="_blank" rel="noopener">https://registry.npm.taobao.org//</a> 使用cnpm install expresstall express</p>
-<blockquote>
-<p>作者：圣手小青龙<br>链接：<a href="https://www.jianshu.com/p/0deb70e6f395" target="_blank" rel="noopener">https://www.jianshu.com/p/0deb70e6f395</a></p>
-</blockquote>
-<blockquote>
-<p>來源：简书</p>
-</blockquote>
-<blockquote>
-<p>简书著作权归作者所有，任何形式的转载都请联系作者获得授权并注明出处。</p>
-</blockquote>
-
-          
+          npm install express –registry=https://registry.npm.taobao.org
+Mark一下 原文国内优秀npm镜像推荐及使用
+npm全称Node Package Manager，是node.js的模块依赖管理工具。由于npm的源在国外，所以国内用户使用起
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/29/npm换源/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
